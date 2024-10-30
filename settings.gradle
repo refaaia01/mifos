@@ -33,8 +33,7 @@ develocity {
         obfuscation {
             ipAddresses { addresses ->
                 addresses.collect { address ->
-//                    "0.0.0.0"
-                    "206.1.28.38"
+                    "0.0.0.0"
                 }
             }
         }
