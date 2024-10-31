@@ -315,6 +315,18 @@ public final class ClientDataValidator {
         final String lastnameParamName = this.fromApiJsonHelper.extractStringNamed(ClientApiConstants.lastnameParamName, element);
         baseDataValidator.reset().parameter(ClientApiConstants.lastnameParamName).value(lastnameParamName).notBlank()
                 .notExceedingLengthOf(50);
+
+        final String countryParamName = this.fromApiJsonHelper.extractStringNamed(ClientApiConstants.countryParamName, element);
+        baseDataValidator.reset().parameter(ClientApiConstants.countryParamName).value(countryParamName).notBlank()
+                .notExceedingLengthOf(255);
+
+        final String cityParamName = this.fromApiJsonHelper.extractStringNamed(ClientApiConstants.cityParamName, element);
+        baseDataValidator.reset().parameter(ClientApiConstants.cityParamName).value(cityParamName).notBlank()
+                .notExceedingLengthOf(255);
+
+        final String streetParamName = this.fromApiJsonHelper.extractStringNamed(ClientApiConstants.streetParamName, element);
+        baseDataValidator.reset().parameter(ClientApiConstants.streetParamName).value(streetParamName).notBlank()
+                .notExceedingLengthOf(255);
     }
 
     private void fullnameCannotBeBlank(final JsonElement element, final DataValidatorBuilder baseDataValidator) {
